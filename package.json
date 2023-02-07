@@ -1,0 +1,32 @@
+{
+  "name": "boiler-template",
+  "version": "1.0.0",
+  "description": "1.- iniciar proyecto con npm init -y 2.- instalar dependencias express sequelize pg pg-hstore cors dotenv 3.- instalar dependencias de desarrollo: nodemon morgan -D 4.- Estructura de carpetas: src/                     -/services -/models -/controllers -/routes -/middlewares -/seeders -/tests -/utils -/templates app.js server.js 5.- crear los scripts : start, dev en package.json 6.- Crear un server básico 7.- Configurar la conexion a bd 8.- Autenticar la bd en app.js 9.-Crear un modelo genérico de usuarios 10.-Crear el init models 11.-Sincronizar la base de datos 12.-Registrar usuarios ---> encriptar las contraseñas-->bcrypt 13.-autenticacion con el login",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "nodemailer": "^6.9.1",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0",
+    "sequelize-auto": "^0.8.8",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
