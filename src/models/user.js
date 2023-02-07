@@ -10,22 +10,46 @@ module.exports = (sequelize, DataTypes) => {
  *   schema:
  *     register:
  *       type: object
- *         properties:
- *           firstname:
- *             type: string
- *             example: Ruben
- *           lastname:
- *             type: string
- *             example: Leon
- *           email:
- *             type: string
- *             example: ing.leon99@gmail.com
- *           phone:
- *             type: string
- *             example: 9999999999
- *           password:
- *             type: string
- *             example: 1234
+ *       properties:
+ *         firstname:
+ *           type: string
+ *           example: Ruben
+ *         lastname:
+ *           type: string
+ *           example: Leon
+ *         email:
+ *           type: string
+ *           example: ing.leon99@gmail.com
+ *         phone:
+ *           type: string
+ *           example: 9999999999
+ *         password:
+ *           type: string
+ *           example: 1234
+ *     login:
+ *       type: object
+ *       properties:
+ *         email:
+ *           type: string
+ *           example: ing.leon@gmail.com
+ *         password:
+ *           type: string
+ *           example: 1234
+ *     loginResponse:
+ *       type: object
+ *       properties:
+ *         username:
+ *           type: string
+ *           example: Ruben
+ *         id:
+ *           type: int
+ *           example: 2
+ *         email:
+ *           type: string
+ *           example: ing.leon99@gmail.com
+ *         token:
+ *           type: string
+ *           example:
  */
 class user extends Sequelize.Model {
   static init(sequelize, DataTypes) {

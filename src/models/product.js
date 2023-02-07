@@ -4,6 +4,30 @@ module.exports = (sequelize, DataTypes) => {
   return product.init(sequelize, DataTypes);
 };
 
+/**
+ * @openapi
+ * components:
+ *   schema:
+ *     addProduct:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *           example: parlante
+ *         price:
+ *           type: double
+ *           example: 1500
+ *         availableQty:
+ *           type: int
+ *           example: 3
+ *         image_url:
+ *           type: string
+ *           example: https://d3ugyf2ht6aenh.cloudfront.net/stores/001/955/262/products/flip-511-b34b410f73b756b8f216389028421439-1024-1024.jpg
+ *         user_id:
+ *           type: int
+ *           example: 2
+ */
+
 class product extends Sequelize.Model {
   static init(sequelize, DataTypes) {
     return super.init(
